@@ -1,0 +1,12 @@
+#!/usr/bin/python2
+
+import os 
+import sys
+import cgi
+
+nodes=os.popen("sudo hadoop dfsadmin -report | grep \"Datanodes available\" | awk '{print $3}'").read()
+
+print("Content-type: text/html")
+print
+
+print "<h1>"+nodes+"</h1>"

@@ -251,49 +251,57 @@
 			<div class="row-fluid">
 						<div class="span3 statbox purple" onTablet="span6" onDesktop="span3" onclick="tasktrack();">
 					<div class="boxchart">10,6,9,0</div>
-					<div id="number1234"><?php
+					
+					<i class="icon-arrow-up"></i>
+					<div class="title">
+<div id="number1234"><?php
  echo file_get_contents("../cgi-bin/tasktracker.txt")
 
  ?> </div>
-					<i class="icon-arrow-up"></i>
-					<div class="title">Tasktrackers Connected</div>
+						Tasktrackers Connected</div>
 					<div class="footer">
 						<a href="mapred.html"> read full report</a>
 					</div>	
 				</div>
 				<div class="span3 statbox blueDark" onTablet="span6" onDesktop="span3" onclick="jobtrack();">
 					<div class="boxchart">5,6,7,-2,-3</div>
-					<div id="number1235"><?php
+					
+					<i class="icon-pencil"></i>
+					<div class="title">
+						<div id="number1235"><?php
  echo file_get_contents("../cgi-bin/jobtracker.txt")
 
  ?> </div>
-					<i class="icon-pencil"></i>
-					<div class="title">Jobs Completed</div>
+						Jobs Completed</div>
 					<div class="footer">
 						<a href="Jobs.html"> read full report</a>
 					</div>
 				</div>
 				<div class="span3 statbox blue noMargin" onTablet="span6" onDesktop="span3" onclick="nodecount();">
 					<div class="boxchart">5,6,7,2,0,-4,-2,4,8,2,3,3,2</div>
-					<div id="number1236"><?php
+					
+					<i class="icon-hdd"></i>
+					<div class="title">
+						<div id="number1236"><?php
  echo file_get_contents("../cgi-bin/datanodecount.txt")
 
  ?></div>
-					<i class="icon-hdd"></i>
-					<div class="title">Connected Datanodes </div>
+						Connected Datanodes </div>
 					<div class="footer">
 						<a href="ip.php"> read full report</a>
 					</div>
 				</div>
 				<div class="span3 statbox pink" onTablet="span6" onDesktop="span3" onclick="tusercount();">
 					<div class="boxchart" >7,2,2,2,</div>
-					<div id="number1237"><?php
+					
+
+					<i class="icon-user"></i>
+					<div class="title" >
+<div id="number1237"><?php
  echo file_get_contents("../cgi-bin/usercount.txt")
 
  ?></div>
-
-					<i class="icon-user"></i>
-					<div class="title" >Users</div>
+						Users</div>
 					<div class="footer">
 						<a href="#"> read full report</a>
 					</div>			
@@ -308,14 +316,15 @@
 						<div class="header">Bandwidth</div>
 						<span class="percent">percent</span>
 						<div class="circleStat">
-                    								<div id="number1238"><?php
- echo file_get_contents("../cgi-bin/bandwidth.txt")
-
- ?></div>
+                    	
+                    		<input type="text" value="78" class="whiteCircle" />
 						</div>
 						<div class="footer">
 							<span class="count">
-								<span class="number">5000</span>
+															<span id="number1238"><?php
+ echo file_get_contents("../cgi-bin/bandwidth.txt")
+
+ ?></span>
 								<span class="unit">GB</span>
 							</span>
 							<span class="sep"> / </span>
@@ -332,13 +341,15 @@
 						<div class="header">Memory</div>
 						<span class="percent">percent</span>
                     	<div class="circleStat">
-  						<div id="number1239"><?php
- echo file_get_contents("../cgi-bin/memory.txt")
 
- ?></div>						</div>
+                    		<input type="text" value="100" class="whiteCircle" />
+  												</div>
 						<div class="footer">
 							<span class="count">
-								<span class="number">64</span>
+								<span id="number1239"><?php
+ echo file_get_contents("../cgi-bin/memory.txt")
+
+ ?></span>
 								<span class="unit">GB</span>
 							</span>
 							<span class="sep"> / </span>

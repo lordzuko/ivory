@@ -1,0 +1,16 @@
+#!/usr/bin/python2
+
+import os
+import sys
+import commands as cmd
+import time
+import cgi
+import cgitb
+cgitb.enable()
+
+form = cgi.FieldStorage()
+
+l = form.keys()
+
+_file=form[l[0]].value
+_type=form[l[1]].value

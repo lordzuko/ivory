@@ -1,0 +1,3 @@
+/blog1.txt:file:3:4732
+/tmp:directory:-:0
+/user:directory:-:0
