@@ -1,0 +1,3 @@
+kol.txt:inserted
+imp.log:deleted
+another.log:inserted
