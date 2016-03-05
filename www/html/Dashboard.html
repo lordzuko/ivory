@@ -251,32 +251,48 @@
 			<div class="row-fluid">
 						<div class="span3 statbox purple" onTablet="span6" onDesktop="span3" onclick="tasktrack();">
 					<div class="boxchart">10,6,9,0</div>
-					<div id="number1234">1</div>
+					<div id="number1234"><?php
+ echo file_get_contents("../cgi-bin/tasktracker.txt")
+
+ ?> </div>
 					<i class="icon-arrow-up"></i>
 					<div class="title">Tasktrackers Connected</div>
 					<div class="footer">
 						<a href="mapred.html"> read full report</a>
 					</div>	
 				</div>
-				<div class="span3 statbox blueDark" onTablet="span6" onDesktop="span3">
+				<div class="span3 statbox blueDark" onTablet="span6" onDesktop="span3" onclick="jobtrack();">
 					<div class="boxchart">5,6,7,-2,-3</div>
-					<div class="number">18<i class="icon-pencil"></i></div>
+					<div id="number1235"><?php
+ echo file_get_contents("../cgi-bin/jobtracker.txt")
+
+ ?> </div>
+					<i class="icon-pencil"></i>
 					<div class="title">Jobs Completed</div>
 					<div class="footer">
 						<a href="Jobs.html"> read full report</a>
 					</div>
 				</div>
-				<div class="span3 statbox blue noMargin" onTablet="span6" onDesktop="span3">
+				<div class="span3 statbox blue noMargin" onTablet="span6" onDesktop="span3" onclick="nodecount();">
 					<div class="boxchart">5,6,7,2,0,-4,-2,4,8,2,3,3,2</div>
-					<div class="number">1<i class="icon-hdd"></i></div>
+					<div id="number1236"><?php
+ echo file_get_contents("../cgi-bin/datanodecount.txt")
+
+ ?></div>
+					<i class="icon-hdd"></i>
 					<div class="title">Connected Datanodes </div>
 					<div class="footer">
 						<a href="ip.php"> read full report</a>
 					</div>
 				</div>
-				<div class="span3 statbox pink" onTablet="span6" onDesktop="span3">
+				<div class="span3 statbox pink" onTablet="span6" onDesktop="span3" onclick="tusercount();">
 					<div class="boxchart" >7,2,2,2,</div>
-					<div class="number" >1<i class="icon-user"></i></div>
+					<div id="number1237"><?php
+ echo file_get_contents("../cgi-bin/usercount.txt")
+
+ ?></div>
+
+					<i class="icon-user"></i>
 					<div class="title" >Users</div>
 					<div class="footer">
 						<a href="#"> read full report</a>
@@ -287,12 +303,15 @@
 			<div class="row-fluid">																		
 			
 				
-				<div class="span2" onTablet="span4" onDesktop="span2">
+				<div class="span2" onTablet="span4" onDesktop="span2" onclick="tbandwidth();">
                 	<div class="circleStatsItemBox green">
 						<div class="header">Bandwidth</div>
 						<span class="percent">percent</span>
 						<div class="circleStat">
-                    		<input type="text" value="78" class="whiteCircle" />
+                    								<div id="number1238"><?php
+ echo file_get_contents("../cgi-bin/bandwidth.txt")
+
+ ?></div>
 						</div>
 						<div class="footer">
 							<span class="count">
@@ -308,13 +327,15 @@
                 	</div>
 				</div>
 
-				<div class="span2" onTablet="span4" onDesktop="span2">
+				<div class="span2" onTablet="span4" onDesktop="span2" onclick="tmemory();">
                 	<div class="circleStatsItemBox greenDark">
 						<div class="header">Memory</div>
 						<span class="percent">percent</span>
                     	<div class="circleStat">
-                    		<input type="text" value="100" class="whiteCircle" />
-						</div>
+  						<div id="number1239"><?php
+ echo file_get_contents("../cgi-bin/memory.txt")
+
+ ?></div>						</div>
 						<div class="footer">
 							<span class="count">
 								<span class="number">64</span>
@@ -337,7 +358,10 @@
 						</div>		
 						<div class="footer">
 							<span class="count">
-								<span class="number">20000</span>
+								<span id="number1240"><?php
+ echo file_get_contents("../cgi-bin/diskspace.txt")
+
+ ?></span>
 								<span class="unit">MB</span>
 							</span>
 							<span class="sep"> / </span>
@@ -348,26 +372,7 @@
 						</div>
                 	</div>
 				</div>
-             <div class="span2" onTablet="span4" onDesktop="span2">
-                	<div class="circleStatsItemBox orange">
-						<div class="header">Disk Space Usage</div>
-						<span class="percent">percent</span>
-						<div class="circleStat">
-                    		<input type="text" value="58" class="whiteCircle" />
-						</div>		
-						<div class="footer">
-							<span class="count">
-								<span class="number">20000</span>
-								<span class="unit">MB</span>
-							</span>
-							<span class="sep"> / </span>
-							<span class="value">
-								<span class="number">50000</span>
-								<span class="unit">MB</span>
-							</span>	
-						</div>
-                	</div>
-				</div>
+             
 				 <div class="span2" onTablet="span4" onDesktop="span2">
                 	<div class="circleStatsItemBox blueDark">
 						<div class="header">Heap Size Usage</div>
@@ -377,8 +382,10 @@
 						</div>		
 						<div class="footer">
 							<span class="count">
-								<span class="number">20000</span>
-								<span class="unit">MB</span>
+										<span id="number1241"><?php
+ echo file_get_contents("../cgi-bin/heapsize.txt")
+
+ ?></span>						<span class="unit">MB</span>
 							</span>
 							<span class="sep"> / </span>
 							<span class="value">
@@ -398,8 +405,10 @@
 						</div>
 						<div class="footer">
 							<span class="count">
-								<span class="number">64</span>
-								<span class="unit">GHz</span>
+																<span id="number1241"><?php
+ echo file_get_contents("../cgi-bin/cpu.txt")
+
+ ?></span><span class="unit">GHz</span>
 							</span>
 							<span class="sep"> / </span>
 							<span class="value">
@@ -666,11 +675,80 @@ position: fixed;
 </html>
 
 <script>
+
+
 function tasktrack()
 {
- document.getElementById('number1234').innerHTML = <?php
- echo file_get_contents("../cgi-bin/tasktracker.txt")
-
- ?> ;
+	$( "#number1234" ).load( "../cgi-bin/tasktracker.txt" );
 }
+
+setInterval("tasktrack();",10000); 
+</script>
+<script>
+function jobtrack()
+{
+	$( "#number1235" ).load( "../cgi-bin/jobtracker.txt" );
+}
+
+setInterval("jobtrack();",10000); 
+</script>
+<script>
+function nodecount()
+{
+	$( "#number1236" ).load( "../cgi-bin/datanodecount.txt" );
+}
+
+
+setInterval("nodecount();",10000); 
+</script>
+<script>
+function tusercount()
+{
+	$( "#number1237" ).load( "../cgi-bin/usercount.txt" );
+}
+
+setInterval("tusercount();",10000); 
+</script>
+<script>
+function tbandwidth()
+{
+	$( "#number1238" ).load( "../cgi-bin/bandwidth.txt" );
+}
+
+setInterval("tbandwidth();",10000); 
+</script>
+<script>
+function tmemory()
+{
+	$( "#number1239" ).load( "../cgi-bin/memory.txt" );
+}
+
+setInterval("tmemory();",10000);     
+</script>
+
+<script>
+function diskspaceusage()
+{
+	$( "#number1240" ).load( "../cgi-bin/diskspace.txt" );
+}
+
+setInterval("diskspaceusage();",10000);     
+</script>
+
+<script>
+function heapsizeusage()
+{
+	$( "#number1241" ).load( "../cgi-bin/heapsize.txt" );
+}
+
+setInterval("heapsizeusage();",10000);     
+</script>
+
+<script>
+function cpuusage()
+{
+	$( "#number1242" ).load( "../cgi-bin/cpu.txt" );
+}
+
+setInterval("cpuusage()",10000);     
 </script>
